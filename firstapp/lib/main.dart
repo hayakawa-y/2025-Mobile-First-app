@@ -174,8 +174,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 fontFamily: "Maa",
                 fontSize: 37,
                 color: const Color.fromARGB(255, 165, 25, 200),
+                backgroundColor: const Color.fromARGB(255, 50, 198, 191)
               ),
             ),
+
+        
+            Image.asset('assets/cat.png',
+              height: 100,
+            ),
+
 
             priceTextField(),
             amountTextField(),
