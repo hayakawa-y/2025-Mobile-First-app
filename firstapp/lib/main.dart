@@ -178,11 +178,19 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
 
-        
+            SizedBox(height: 20),
+
             Image.asset('assets/cat.png',
               height: 100,
+              width: 200,
             ),
 
+            SizedBox(height: 20),
+
+            Image.network( "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT0wjce5WnR6f7xo79l9HmgAvU26MsKYGRMw&s",
+              height: 100,
+              width: 200,
+            ),
 
             priceTextField(),
             amountTextField(),
