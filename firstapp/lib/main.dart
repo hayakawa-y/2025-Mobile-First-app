@@ -167,6 +167,15 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+
+            Text(
+              "Change Calculate",
+              style: TextStyle(
+                fontFamily: "Maa",
+                fontSize: 24,
+              ),
+            ),
+
             priceTextField(),
             amountTextField(),
             calculateButton(),
