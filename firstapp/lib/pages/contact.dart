@@ -7,22 +7,25 @@ class ContactPage extends StatefulWidget {
 }
 
 class _ContactPageState extends State<ContactPage> {
-
+List mydata = ['apple','banana','papaya'];
   @override
   Widget build(BuildContext context) {
     return ListView(
-      children: const [
-        Center(
-          child: Text(
-            'Contact Page',
-            style: TextStyle(fontSize: 20),
-          ),
+      children:[
+        ListTile(
+          onTap:(){},
+          leading:FlutterLogo(),
+          title: Text("subtitle"),
         ),
-
-        SizedBox(height: 10),
-
-        Center(
-          child: Text('@CAMT:Room 414'),
+        ListTile(
+          onTap:(){},
+          leading:FlutterLogo(),
+          title: Text(mydata[1]),
+        ),
+        ListTile(
+          onTap:(){},
+          leading:FlutterLogo(),
+          title: Text(mydata[2]),
         ),
       ],
     );
