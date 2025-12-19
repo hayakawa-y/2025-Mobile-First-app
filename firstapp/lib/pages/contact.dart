@@ -13,9 +13,10 @@ List mydata = ['apple','banana','papaya'];
     return ListView(
       children:[
         ListTile(
-          onTap:(){},
-          leading:FlutterLogo(),
-          title: Text("subtitle"),
+          leading: Icon(Icons.abc_sharp),
+          title: Text(mydata[0]),
+          subtitle: Text("subtitle"),
+          trailing: FlutterLogo(),
         ),
         ListTile(
           onTap:(){},
