@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:firstapp/pages/detail.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -72,11 +73,22 @@ class _HomePageState extends State<HomePage> {
               color: Colors.white,
             ),
           ),
-          SizedBox(height:20,),
+          const SizedBox(height: 20),
           TextButton(
-            onPressed: () {},
-            child: const Text("read more",
-            style: TextStyle(color: Colors.white)),)
+            onPressed: () {
+              print("next page >>");
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => DetailsPage(),
+                ),
+              );
+            },
+            child: const Text(
+              "read more",
+              style: TextStyle(color: Colors.white),
+            ),
+          ),
         ],
       ),
     );

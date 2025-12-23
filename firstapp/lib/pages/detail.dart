@@ -9,6 +9,7 @@ class DetailsPage extends StatefulWidget {
 
 class _DetailsPageState extends State<DetailsPage> {
   @override
+  
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -18,19 +19,10 @@ class _DetailsPageState extends State<DetailsPage> {
         padding: const EdgeInsets.all(24),
         children: [
           const Text("Details Explanation"),
-          TextButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const DetailsPage(),
-                ),
-              );
-            },
-            child: const Text("read more"),
-          ),
         ],
-      ),
+      )
     );
   }
 }
+
+       
