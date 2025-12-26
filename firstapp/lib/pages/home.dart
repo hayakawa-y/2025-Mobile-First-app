@@ -18,7 +18,10 @@ class _HomePageState extends State<HomePage> {
         builder: (context, snapshot){
           var data = json.decode(snapshot.data.toString());
           return ListView.builder(itemBuilder: (BuildContext context, int index){
-            return MyBox(data[index]['image_url'],data[index]['title'],data[index]['subtitle']);
+            return MyBox(data[index]['image_url'],
+                         data[index]['title'],
+                         data[index]['subtitle'],
+                         data[index]['detail']);
           },
           itemCount: data.length,);
         },
@@ -27,7 +30,12 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  Widget MyBox(String imageUrl, String title, String image_url) {
+  Widget MyBox(String image_url, String title, String subtitle, String detail) {
+    var v1, v2, v3, v4;
+    v1 = image_url;
+    v2 = title;
+    v3 = subtitle;
+    v4 = detail;
     return Container(
       margin: EdgeInsets.only(top:20),
       padding:EdgeInsets.all(20),
@@ -35,7 +43,7 @@ class _HomePageState extends State<HomePage> {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(24),
         image: DecorationImage(
-          image: NetworkImage(imageUrl),
+          image: NetworkImage(image_url),
           fit: BoxFit.cover,
           colorFilter: ColorFilter.mode(
             Colors.black.withOpacity(0.6),
@@ -56,7 +64,7 @@ class _HomePageState extends State<HomePage> {
           ),
           const SizedBox(height: 16),
           Text(
-            image_url,
+            subtitle,
             style: const TextStyle(
               fontSize: 14,
               color: Colors.white,
@@ -69,7 +77,7 @@ class _HomePageState extends State<HomePage> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => DetailsPage(),
+                  builder: (context) => DetailsPage(v1: v1, v2: v2, v3: v3, v4: v4,),
                 ),
               );
             },
